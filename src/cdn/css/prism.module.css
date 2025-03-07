@@ -1,0 +1,23 @@
+.container > .toolbar {
+	position: relative;
+}
+
+.container > .toolbar > .copy {
+	position: absolute;
+	color: var(--background);
+	background: var(--color);
+	z-index: 1;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	border-radius: .25rem;
+	transition: opacity .5s ease-in-out, color .5s ease, background .5s ease-in-out;
+}
+.container:hover > .toolbar > .copy {
+	opacity: 1;
+}
+
+.container > .toolbar > .copy:hover {
+	background: #555;
+	color: var(--alt-background);
+}
