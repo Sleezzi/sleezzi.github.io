@@ -1,0 +1,104 @@
+.content {
+	min-height: calc(100% - 5rem - 5rem * 2);
+	width: calc(100% - 2rem * 2);
+	padding: 0 2rem;
+	overflow-x: hidden;
+	background: #020202;
+	position: relative;
+}
+#pointer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: var(--main-color);
+	background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'><circle fill='%236366f1' id='pattern-circle' cx='10' cy='10' r='2.5'></circle></svg>");
+	transition: all .3s;
+}
+.content > *:not(#pointer) {
+	position: relative;
+	z-index: 2;
+}
+.content section {
+	min-height: 100%;
+	width: 100%;
+}
+.experience {
+	height: 15rem;
+	width: calc(50% - 1rem * 2 - 1rem * 2 - 2px * 2);
+	padding: 1rem;
+	margin: 1rem;
+	background: center/cover no-repeat;
+	border: #FFFFFF2F solid 2px;
+	border-radius: .75rem;
+	overflow: hidden;
+	color: var(--color) !important;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	transform: scale(1);
+	transition: transform .5s ease, filter .5s ease;
+}
+.experience:hover {
+	color: var(--color) !important;
+}
+.experience.blurred {
+	transform: scale(0.99);
+	filter: blur(.15rem);
+	transition: transform .5s ease, filter .5s ease;
+}
+.grid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.project {
+	margin: 1rem;
+	padding: 1rem;
+	background: #cccccc0F;
+	border-radius: 1rem;
+	border: #FFFFFF2F solid 2px;
+	overflow: hidden;
+	height: 7rem;
+	width: 7rem;
+	transition: transform .5s ease, background .25s ease !important;
+}
+.project img {
+	height: 100%;
+	width: 100%;
+}
+.skill {
+	margin: 1rem;
+	padding: 1rem;
+	background: #cccccc0F;
+	border-radius: 1rem;
+	height: 5rem;
+	width: 5rem;
+	overflow: hidden;
+	border: #FFFFFF2F solid 2px;
+	transition: transform .5s ease, background .25s ease !important;
+}
+.skill:hover, .project:hover {
+	transform: scale(1.1);
+	background: var(--background);
+}
+.skill img {
+	height: 100%;
+	width: 100%;
+}
+@media screen and (max-width: 1195px) {
+	.content {
+		width: calc(100% - 1rem);
+		padding: 0 0 0 1rem;
+	}
+	.first {
+		flex-direction: column;
+		width: calc(100% - 1rem * 2);
+		padding: 0 1rem;
+	}
+	.first .container, .first .code {
+		width: 100%;
+	}
+	#pointer {
+		display: none;
+	}
+}

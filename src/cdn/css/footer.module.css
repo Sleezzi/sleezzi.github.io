@@ -1,0 +1,32 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	background: var(--background);
+	overflow: hidden;
+	text-align: center;
+	height: 2rem;
+	width: calc(100% - 1rem * 2 - 2rem * 2);
+	margin: 0 2rem;
+	border-top: #FFFFFF0F solid 2px;
+}
+.footer .right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer .link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100% - 1rem * 2);
+	padding: 1rem 0;
+}
+.link a {
+	height: 2rem;
+	margin: 0 1rem;
+}
+.link img {
+	height: 100%;
+}

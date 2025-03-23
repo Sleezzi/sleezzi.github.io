@@ -1,0 +1,192 @@
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.product, #octopus .supportedSystems .system  {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 20rem;
+	width: 15rem;
+	background: var(--alt-background);
+	overflow: hidden;
+	border-radius: .5rem;
+	box-shadow: 0 0 5rem 1.5rem var(--alt-background);
+	text-align: center;
+	margin: 2.5rem;
+	transition: transform .5s ease;
+}
+.product:hover {
+	transform: scale(1.1);
+}
+.product img {
+	max-width: 100%;
+	min-height: 10rem;
+	max-height: 50%;
+}
+.product .content {
+	min-height: 50%;
+}
+.product h2 {
+	margin: .5rem 0;
+	padding: 0;
+	height: 2.5rem;
+}
+.product p {
+	margin: 0;
+	padding: 0 1rem;
+	height: calc(100% - 2.5rem);
+	width: calc(100% - 1rem * 2);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.filter {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.filter button {
+	background: var(--alt-background);
+	padding: .5rem 1.5rem !important;
+	margin: 1rem;
+	border: var(--color) solid .05rem;
+	border-radius: 100vh;
+	text-wrap: nowrap;
+	transition: background .1s ease, color .1s ease;
+}
+.filter button.active {
+	color: var(--background);
+	background: var(--color);
+}
+#octopus {
+	width: calc(100% - 5rem * 2);
+	padding: 0 5rem;
+}
+#octopus .supportedSystems {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+#octopus .supportedSystems .system {
+	height: 15rem;
+	width: 17rem;
+	color: var(--color) !important;
+}
+
+#octopus .supportedSystems .system .images {
+	position: relative;
+	width: 100%;
+	height: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#octopus .supportedSystems .system img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: none;
+	width: calc(100% - 1rem * 2);
+	padding: 1rem;
+	background: none;
+	margin: 0;
+	max-height: 100%;
+	z-index: 2;
+	opacity: 0;
+	transition: opacity .5s ease;
+}
+#octopus .supportedSystems .system img.octopus_product {
+	position: static;
+	opacity: 1;
+	padding: 0;
+	border-radius: 0;
+	right: 0;
+	width: unset;
+	z-index: 3;
+}
+#octopus .supportedSystems .system:hover img.octopus_product {
+	opacity: 0;
+}
+#octopus .supportedSystems .system:hover img:not(.octopus_product) {
+	opacity: 1;
+}
+#octopus .supportedSystems .system h4 {
+	height: 25%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	margin: 0;
+}
+
+.reference {
+	position: relative;
+	color: var(--alt-color) !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 25rem;
+	width: 25rem;
+	background: var(--alt-background);
+	border-radius: .5rem;
+	box-shadow: 0 0 5rem 1.5rem var(--alt-background);
+	text-align: center;
+	margin: 2.5rem;
+	transition: transform .5s ease, margin .5s ease, color .5s ease !important;
+}
+.reference:hover {
+	transform: scale(1.1);
+	margin: 2rem 2.5rem 3rem 2.5rem;
+	color: var(--color) !important;
+}
+.reference img {
+	max-height: 15rem;
+	width: 100%;
+	overflow: hidden;
+}
+.reference .content {
+	height: calc(100% - 15rem);
+	width: calc(100% - 2rem * 2);
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.reference h3 {
+	margin: .5rem 0;
+	padding: 0;
+}
+.reference h2 {
+	margin: 0;
+	padding: 0;
+}
+.reference .participation {
+	position: absolute;
+	padding: 1rem;
+	top: 0;
+	right: 0;
+	color: var(--color) !important;
+}
+
+@media screen and (max-width: 1195px) {
+	#octopus {
+		width: calc(100% - 1rem * 2);
+		padding: 0 1rem;
+	}
+	#octopus > div {
+		text-align: center;
+		flex-direction: column-reverse;
+	}
+}

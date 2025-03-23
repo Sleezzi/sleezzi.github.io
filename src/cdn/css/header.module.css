@@ -1,0 +1,42 @@
+.header {
+	width: 100%;
+	height: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+	background: var(--background);
+	border-bottom: 1px solid #ccc;
+	z-index: 50;
+}
+.header .container {
+	height: 100%;
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#icon {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .05rem .25rem;
+	margin: .5rem;
+	border-radius: .5rem;
+	color: white;
+}
+#icon h1 {
+	padding: 0;
+	margin: 0 .25rem;
+}
+#icon h1:nth-child(1) {
+	font-size: 2rem;
+}
+#icon .active {
+	opacity: 1;
+}
+#icon .hidden {
+	opacity: 0;
+	transition: opacity .5s ease;
+}

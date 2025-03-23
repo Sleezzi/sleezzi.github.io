@@ -1,0 +1,87 @@
+.popup {
+	position: fixed;
+	height: calc(100% - 1rem * 2);
+	width: calc(100% - 5rem * 2);
+	padding: 1rem 5rem;
+	top: 0;
+	left: 0;
+	backdrop-filter: blur(.5rem);
+	background: #FFFFFF2F;
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup .close {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	background: none;
+	border: none;
+	color: black;
+	font-size: 1.75rem;
+	font-weight: bold;
+	transition: color .5s ease;
+}
+.popup .close:hover {
+	color: red;
+}
+.popup div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.popup button {
+	background: rgb(0, 140, 255);
+	color: white;
+	padding: .5rem 1rem;
+}
+
+.target {
+	min-height: 5rem;
+	width: 100%;
+	background: linear-gradient(to left, transparent 0, #555 25%, #555 75%, transparent 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+}
+.content {
+	min-height: calc(100% - 5rem);
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+.container {
+	width: calc(50% - 1px * 2 - 1rem * 2);
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	border: 1px solid gray;
+	text-align: center;
+	padding: 1rem;
+}
+.container h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+}
+@media screen and (max-width: 1195px) {
+	.content {
+		min-height: calc(100% - 5rem);
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		flex-wrap: wrap;
+	}
+	.container {
+		width: calc(100% - 1rem * 2);
+		text-align: center;
+	}
+}
